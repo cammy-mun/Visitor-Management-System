@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from rest_framework import viewsets          # add this
 from .serializers import TodoSerializer      # add this
+from .serializers import VisitorSerializer
 from .models import Todo                     # add this
+from .models import Visitor
 
 # Create your views here.
 
@@ -9,3 +11,8 @@ from .models import Todo                     # add this
 class TodoView(viewsets.ModelViewSet):       # add this
     serializer_class = TodoSerializer          # add this
     queryset = Todo.objects.all()
+
+
+class VisitorView(viewsets.ModelViewSet):       # add this
+    serializer_class = VisitorSerializer         # add this
+    queryset = Visitor.objects.all()

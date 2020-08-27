@@ -21,7 +21,11 @@ from aws import views
 router = routers.DefaultRouter()
 router.register(r'todos', views.TodoView, 'todo')
 
+# visitorRouter = routers.DefaultRouter()
+router.register(r'visitors', views.VisitorView, 'visitor')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    # path('test/', include(visitorRouter.urls))
 ]
