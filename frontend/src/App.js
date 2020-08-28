@@ -8,10 +8,6 @@ import QrCode from "./components/QrCode";
 // import axios from "axios";
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   render() {
     return (
       <Router>

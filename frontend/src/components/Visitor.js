@@ -19,6 +19,7 @@ class Visitor extends Component {
 
   onSubmit = (event) => {
     const { name, nric, phoneNum, patientName, wardNum, bedNum } = this.state;
+
     axios
       .post("http://localhost:8000/api/visitors/", {
         name: name,
@@ -29,7 +30,7 @@ class Visitor extends Component {
         bedNum: bedNum,
       })
       .then(() => this.props.history.push("/qrcode"));
-    console.log("submit!");
+
     event.preventDefault();
   };
 
@@ -41,7 +42,7 @@ class Visitor extends Component {
     const { name, nric, phoneNum, patientName, wardNum, bedNum } = this.state;
     return (
       <div
-        className="visitorpages"
+        className="visitorpage"
         style={{ marginRight: "100px", marginLeft: "100px" }}
       >
         <h1>Visitor Page</h1>
